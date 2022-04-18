@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D34E5536-B95F-4E09-B2B7-79C4295BBE41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataBaseFirm</RootNamespace>
+    <AssemblyName>DataBaseFirm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.2658.0, Culture=neutral, PublicKeyToken=09af7300eec23701" />
+    <Reference Include="Devart.Data.PostgreSql, Version=7.20.1866.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Vs.14, Version=7.20.1866.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adding_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adding_user.Designer.cs">
+      <DependentUpon>Adding_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration.Designer.cs">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllGoods.Designer.cs">
+      <DependentUpon>AllGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datalayer.cs" />
+    <Compile Include="FirmDataSet.cs">
+      <DependentUpon>FirmDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FirmDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FirmDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods.Designer.cs">
+      <DependentUpon>Goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsinWarehouse1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsinWarehouse1.Designer.cs">
+      <DependentUpon>GoodsinWarehouse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertGood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertGood.Designer.cs">
+      <DependentUpon>InsertGood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertSale.Designer.cs">
+      <DependentUpon>InsertSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWarehouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertWarehouses.Designer.cs">
+      <DependentUpon>InsertWarehouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Max_priority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Max_priority.Designer.cs">
+      <DependentUpon>Max_priority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Max_Stonk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Max_Stonk.Designer.cs">
+      <DependentUpon>Max_Stonk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinStonk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinStonk.Designer.cs">
+      <DependentUpon>MinStonk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotinWareH1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotinWareH1.Designer.cs">
+      <DependentUpon>NotinWareH1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Priority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Priority.Designer.cs">
+      <DependentUpon>Priority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spros.Designer.cs">
+      <DependentUpon>Spros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Top5Month.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top5Month.Designer.cs">
+      <DependentUpon>Top5Month.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopGoods.Designer.cs">
+      <DependentUpon>TopGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transporting.Designer.cs">
+      <DependentUpon>Transporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse1.Designer.cs">
+      <DependentUpon>Warehouse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse2.Designer.cs">
+      <DependentUpon>Warehouse2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adding_user.resx">
+      <DependentUpon>Adding_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration.resx">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllGoods.resx">
+      <DependentUpon>AllGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goods.resx">
+      <DependentUpon>Goods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsinWarehouse1.resx">
+      <DependentUpon>GoodsinWarehouse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertGood.resx">
+      <DependentUpon>InsertGood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertSale.resx">
+      <DependentUpon>InsertSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertWarehouses.resx">
+      <DependentUpon>InsertWarehouses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Max_priority.resx">
+      <DependentUpon>Max_priority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Max_Stonk.resx">
+      <DependentUpon>Max_Stonk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinStonk.resx">
+      <DependentUpon>MinStonk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotinWareH1.resx">
+      <DependentUpon>NotinWareH1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Priority.resx">
+      <DependentUpon>Priority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spros.resx">
+      <DependentUpon>Spros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top5Month.resx">
+      <DependentUpon>Top5Month.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopGoods.resx">
+      <DependentUpon>TopGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporting.resx">
+      <DependentUpon>Transporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse1.resx">
+      <DependentUpon>Warehouse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse2.resx">
+      <DependentUpon>Warehouse2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FirmDataSet.xsc">
+      <DependentUpon>FirmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FirmDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FirmDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirmDataSet.xss">
+      <DependentUpon>FirmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
